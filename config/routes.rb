@@ -4,15 +4,18 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "articles#home"
 
-  post "/create", to: "articles#create"
+  post "articles/create", to: "articles#create"
 
-  post "/update", to: "articles#update"
+  post "article/update", to: "articles#update"
 
-  delete "/delete", to: "articles#delete"
+  delete "articles/delete", to: "articles#delete"
 
-  get "/filter", to: "articles#filter"
+  get "articles/filter", to: "articles#filter"
 
-  get "/search", to: "articles#search"
+  get "articles/search", to: "articles#search"
 
-  get "/sort", to: "articles#sort"
+  get "articles/sort", to: "articles#sort"
+
+  get "articles/all", to: "articles#all"
+
 end
